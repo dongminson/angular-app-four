@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Boards</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input placeholder="Add a title" matInput [(ngModel)]="data.title" />
+
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button [disabled]="!data.title || data.title.trim() === ''" [mat-dialog-close]="data.title" color="primary" cdkFocusInitial>
+        Create
+    </button>
+    <button mat-button (click)="onNoClick()" color="secondary">
+        Cancel
+    </button>
+</div>
